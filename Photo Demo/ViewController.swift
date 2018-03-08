@@ -24,6 +24,12 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
 
     @IBAction func importImageTapped(_ sender: Any) {
         
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        imagePickerController.allowsEditing = false
+        self.present(imagePickerController, animated: true, completion: nil)
+        
     }
 
 }
